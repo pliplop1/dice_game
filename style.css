@@ -1,3 +1,18 @@
-body {
-  font-family: "latoblack";
+* {
+  margin: 0;
+  padding: 0;
 }
+body {
+  font-family: "latoblack_italic";
+  /* img back*/
+  background: url(./image/back_dice.jpg) no-repeat 50% 50%;
+  background-size: 100% 100%;
+  padding: 100px 0px 100px 0px;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.bg-light, .bg-white {
+  height: 80vh;
+}
+.
