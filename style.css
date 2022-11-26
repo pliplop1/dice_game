@@ -12,7 +12,13 @@ body {
   height: 100vh;
 }
 
-.bg-light, .bg-white {
+.bg-light,
+.bg-white {
   height: 80vh;
 }
-.
+.current {
+  position: relative;
+  top: 30em;
+  left: 50%;
+  transform: translateX(-50%);
+}
