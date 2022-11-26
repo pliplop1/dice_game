@@ -1,24 +1,44 @@
 * {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
+
 body {
-  font-family: "latoblack_italic";
+  font-family: "latohairline";
   /* img back*/
   background: url(./image/back_dice.jpg) no-repeat 50% 50%;
-  background-size: 100% 100%;
   padding: 100px 0px 100px 0px;
   overflow: hidden;
   height: 100vh;
+  background-size: cover;
+  position: relative;
 }
-
 .bg-light,
 .bg-white {
   height: 80vh;
 }
+.player,
+.total_score,
 .current {
   position: relative;
-  top: 30em;
   left: 50%;
   transform: translateX(-50%);
+}
+.player {
+  top: 17vh;
+  height: 100px;
+  font-size: 2.5em;
+}
+.total_score {
+  top: 12vh;
+  height: 65px;
+  font-size: 5em;
+}
+.current {
+  top: 35vh;
+  height: 80px;
+  font-size: 0.9em;
+  padding: 9px;
+  font-weight: bold;
 }
