@@ -14,13 +14,16 @@ body {
   background-size: cover;
   position: relative;
 }
-.bg-light,
-.bg-white {
+.left,
+.right {
   height: 80vh;
 }
 .player,
 .total_score,
-.current {
+.current,
+.New_game,
+.Roll,
+.Hold {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -36,9 +39,20 @@ body {
   font-size: 5em;
 }
 .current {
+  display: block;
   top: 35vh;
   height: 80px;
   font-size: 0.9em;
   padding: 9px;
   font-weight: bold;
+  width: 100px;
+}
+.New_game {
+  top: -70vh;
+}
+.Roll {
+  top: -32vh;
+}
+.Hold {
+  top: -32vh;
 }
