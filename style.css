@@ -23,7 +23,8 @@ body {
 .current,
 .New_game,
 .Roll,
-.Hold {
+.Hold,
+.dice {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -51,8 +52,11 @@ body {
   top: -70vh;
 }
 .Roll {
-  top: -32vh;
+  top: -33.1vh;
 }
 .Hold {
-  top: -32vh;
+  top: -32.1vh;
+}
+.dice {
+  bottom: 71vh;
 }
