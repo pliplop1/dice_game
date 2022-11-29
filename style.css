@@ -7,7 +7,7 @@
 body {
   font-family: "latohairline";
   /* img back*/
-  background: url(./image/back_dice.jpg) no-repeat 50% 50%;
+  background: url(./image/backdice.jpg) no-repeat 50% 50%;
   padding: 100px 0px 100px 0px;
   overflow: hidden;
   height: 100vh;
@@ -21,10 +21,10 @@ body {
 .player,
 .total_score,
 .current,
-.New_game,
-.Roll,
-.Hold,
-.dice {
+.button-New_game,
+.button-Roll,
+.button-Hold,
+.imageDice {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -48,18 +48,24 @@ body {
   font-weight: bold;
   width: 100px;
 }
-.New_game {
+#score-current-player-1,
+#score-current-player-2 {
+  font-size: 2em;
+}
+/*******************************button*******************************/
+.button-New_game {
   top: -70vh;
 }
-.Roll {
+.button-Roll {
   top: -33.1vh;
 }
-.Hold {
+.button-Hold {
   top: -32.1vh;
 }
-.dice {
+.imageDice {
   bottom: 71vh;
 }
+/***************************media************************************/
 @media screen and (max-width: 500px) {
   .total_score {
     top: 200px;
@@ -68,23 +74,33 @@ body {
   .player {
     font-size: 2em;
   }
-  .Roll {
+  .button-Roll {
     top: -360px;
   }
-  .Hold {
+  .button-Hold {
     top: -200px;
   }
 }
 @media screen and (max-width: 380px) {
-  .Roll {
+  .button-Roll {
     top: -300px;
   }
 }
-@media screen and (max-width: 380px) and (max-height : 670px) {
+@media screen and (max-width: 380px) and (max-height: 670px) {
   .total_score {
     top: 130px;
     font-size: 2.5em;
   }
-  .Roll {
+  .button-Roll {
     top: -250px;
   }
+}
+.button-Roll,
+.button-Hold,
+.button-New_game {
+  border-width: 0 !important;
+}
+.button-Roll:active,
+.button-Roll:focus {
+  border: none !important;
+}

@@ -19,41 +19,66 @@
       <div class="container">
         <div class="row">
           <!-- left-->
+
           <div class="col-6 bg-light left">
             <!-- player 1-->
+
             <div class="container">
               <div class="row">
                 <div class="col-12 bg-muted player">PLAYER 1</div>
               </div>
+
               <!--score 1-->
+
               <div class="container">
                 <div class="row">
-                  <div class="col-12 bg-muted total_score">43</div>
+                  <div class="col-12 bg-muted total_score" id="score-player1">
+                    43
+                  </div>
                 </div>
+
                 <!-- current 1-->
-                <div class="col-2 bg-danger current">CURRENT</div>
+
+                <div class="col-2 bg-danger current">
+                  CURRENT
+                  <div class="col text-white" id="score-current-player-1">
+                    11
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
           <!-- right-->
+
           <div class="col-6 bg-white right">
             <!-- player 2-->
             <div class="container">
               <div class="col-12 bg-muted player">PLAYER 2</div>
             </div>
-            <!-- current 2-->
+
+            <!-- score 2-->
+
             <div class="container">
-              <div class="col-12 bg-muted total_score">72</div>
+              <div class="col-12 bg-muted total_score" id="score-player2">
+                72
+              </div>
             </div>
+
             <!-- current 2-->
-            <div class="col-2 bg-danger current">CURRENT</div>
+
+            <div class="col-2 bg-danger current">
+              CURRENT
+              <div class="col text-white" id="score-current-player-2">25</div>
+            </div>
           </div>
         </div>
       </div>
+
       <!-- button newgame-->
 
       <div class="row">
-        <button type="button" class="col-12 btn btn New_game">
+        <button type="button" class="col-12 btn btn button-New_game">
           <img src="./icons/new.png" width="30" height="30" alt="New_game" />
           NEW GAME
         </button>
@@ -61,22 +86,30 @@
 
       <!-- button rolldice-->
 
-      <button type="button" class="col-12 btn btn Roll">
+      <button type="button" class="col-12 btn btn button-Roll">
         <img src="./icons/rool.png" width="30" height="30" alt="Roll" />
         ROLL DICE
       </button>
 
       <!-- button hold-->
 
-      <button type="button" class="col-12 btn btn Hold">
+      <button type="button" class="col-12 btn btn button-Hold">
         <img src="./icons/hold.png" width="30" height="30" alt="hold" />
         HOLD
       </button>
 
       <!-- dice image-->
-      <div class="col-12 bg dice">
-        <img src="./image/dice_5.png" width="100" height="100" alt="dice" />
+
+      <div class="col-12 bg imageDice">
+        <img
+          src="./image/dice_5.png"
+          width="100"
+          height="100"
+          alt="dice"
+          id="dede"
+        />
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
