@@ -15,14 +15,13 @@
     <link rel="shortcut icon" href="./image/dice_1.png" type="image/ dice" />
   </head>
   <body>
-    <main>
-      <div class="container">
-        <div class="row">
-          <!-- left-->
-
-          <div class="col-6 bg-light left">
-            <!-- player 1-->
-
+    <!-- <main> -->
+    <div class="container">
+      <div class="row bg-white">
+        <!-- left-->
+        <div class="col-6 player-0-div left active">
+          <!-- player 1-->
+          <div class="player-0-panel">
             <div class="container">
               <div class="row">
                 <div class="col-12 bg-muted player">PLAYER 1</div>
@@ -32,7 +31,7 @@
 
               <div class="container">
                 <div class="row">
-                  <div class="col-12 bg-muted total_score" id="score-player1">
+                  <div class="col-12 bg-muted total-score" id="score-player-0">
                     43
                   </div>
                 </div>
@@ -41,75 +40,83 @@
 
                 <div class="col-2 bg-danger current">
                   CURRENT
-                  <div class="col text-white" id="score-current-player-1">
+                  <div class="col text-white" id="score-current-player-0">
                     11
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- right-->
+        <!-- right-->
 
-          <div class="col-6 bg-white right">
+        <div class="col-6 player-1-div right">
+          <div class="player-1-panel">
             <!-- player 2-->
-            <div class="container">
-              <div class="col-12 bg-muted player">PLAYER 2</div>
-            </div>
-
-            <!-- score 2-->
 
             <div class="container">
-              <div class="col-12 bg-muted total_score" id="score-player2">
-                72
+              <div class="row">
+                <div class="col-12 bg-muted player">PLAYER 2</div>
               </div>
-            </div>
 
-            <!-- current 2-->
+              <!-- score 2-->
 
-            <div class="col-2 bg-danger current">
-              CURRENT
-              <div class="col text-white" id="score-current-player-2">25</div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 bg-muted total-score" id="score-player-1">
+                    72
+                  </div>
+                </div>
+                <!-- current 2-->
+
+                <div class="col-2 bg-danger current">
+                  CURRENT
+                  <div class="col text-white" id="score-current-player-1">
+                    25
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- button newgame-->
-
-      <div class="row">
+        <!-- button newgame-->
         <button type="button" class="col-12 btn btn button-New_game">
           <img src="./icons/new.png" width="30" height="30" alt="New_game" />
           NEW GAME
         </button>
+
+        <div id="buttons-play">
+          <!-- button rolldice-->
+
+          <button type="button" class="col-12 btn btn button-Roll">
+            <img src="./icons/rool.png" width="30" height="30" alt="Roll" />
+            ROLL DICE
+          </button>
+
+          <!-- button hold-->
+
+          <button type="button" class="col-12 btn btn button-Hold">
+            <img src="./icons/hold.png" width="30" height="30" alt="hold" />
+            HOLD
+          </button>
+        </div>
+
+        <!-- dice image-->
+
+        <div class="col-12 bg imageDice">
+          <img
+            src="./image/dice_5.png"
+            width="100"
+            height="100"
+            alt="dice"
+            id="dede"
+          />
+        </div>
       </div>
-
-      <!-- button rolldice-->
-
-      <button type="button" class="col-12 btn btn button-Roll">
-        <img src="./icons/rool.png" width="30" height="30" alt="Roll" />
-        ROLL DICE
-      </button>
-
-      <!-- button hold-->
-
-      <button type="button" class="col-12 btn btn button-Hold">
-        <img src="./icons/hold.png" width="30" height="30" alt="hold" />
-        HOLD
-      </button>
-
-      <!-- dice image-->
-
-      <div class="col-12 bg imageDice">
-        <img
-          src="./image/dice_5.png"
-          width="100"
-          height="100"
-          alt="dice"
-          id="dede"
-        />
-      </div>
-    </main>
+    </div>
+    <!-- </main> -->
     <script src="index.js"></script>
   </body>
 </html>
