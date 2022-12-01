@@ -63,7 +63,7 @@ function nextPlayer() {
   document.getElementById("score-current-player-0").textContent = "0";
   document.getElementById("score-current-player-1").textContent = "0";
 
-  // manière af
+  // test 1
   // active Player = 0
   // left => blanc right gris
   // sinon player 1 left => gris right => blanc
@@ -89,7 +89,7 @@ function nextPlayer() {
   //     .classList.remove("bg-white");
   // }
 
-  // manière Fabien :
+  // test 2 :
   // utiliser classe active, et div au dessus pour récup le parent de la class active
   // et modif la couleur
   document.querySelector(".player-1-div").classList.toggle("active");
