@@ -34,12 +34,6 @@ body .container:first-child {
   left: 50%;
   transform: translateX(-50%);
 }
-
-#buttons-play {
-  top: 4rem;
-  position: relative;
-}
-
 .player {
   height: 100px;
   font-size: 2.5em;
@@ -62,7 +56,24 @@ body .container:first-child {
 #score-current-player-1 {
   font-size: 2em;
 }
+/**************************************active*************************************/
+.active {
+  background-color: #f7f7f7;
+  font-weight: bolder;
+  text-shadow: 1px 2px 3px #000000;
+}
+
 /*******************************button*******************************/
+button:hover {
+  font-weight: 600;
+  text-shadow: 1px 2px 3px #000000;
+  padding: 3px;
+}
+
+#buttons-play {
+  top: 4rem;
+  position: relative;
+}
 .button-New_game {
   position: absolute;
   margin-top: 2rem;
@@ -121,7 +132,4 @@ body .container:first-child {
 .button-Roll:active,
 .button-Roll:focus {
   border: none !important;
-}
-.active {
-  background-color: #f8f9fa;
 }

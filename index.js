@@ -45,9 +45,25 @@ document.querySelector(".button-Hold").addEventListener("click", function () {
   scores[activePlayer] += roundScore;
 
   // Update the UI
+  winner(activePlayer);
   addTotalPlayerScore(activePlayer);
   nextPlayer();
 });
+
+//winner
+//winner(activePlayer);
+
+/***************check the winner *********************************/
+
+//if >= 100 displays winner instead of the player who won and block game
+
+function winner(activePlayer) {
+  if (scores[activePlayer] >= 10) {
+    document.querySelector("#textPlayer-" + activePlayer).textContent =
+      "Winner!";
+    document.querySelector("#dede").style.display = "none";
+  }
+}
 
 /*********************funtion nextplayer ***********************************/
 var activePlayer = Math.floor(Math.random() * 2) + 1;
@@ -63,46 +79,31 @@ function nextPlayer() {
   document.getElementById("score-current-player-0").textContent = "0";
   document.getElementById("score-current-player-1").textContent = "0";
 
-  // test 1
-  // active Player = 0
-  // left => blanc right gris
-  // sinon player 1 left => gris right => blanc
-  // if (activePlayer == 0) {
-  //   document
-  //     .querySelector(".container>.row>.left")
-  //     .classList.remove("bg-light");
-  //   document.querySelector(".container>.row>.left").classList.add("bg-white");
-
-  //   document.querySelector(".container>.row>.right").classList.add("bg-light");
-  //   document
-  //     .querySelector(".container>.row>.right")
-  //     .classList.remove("bg-white");
-  // } else {
-  //   document
-  //     .querySelector(".container>.row>.right")
-  //     .classList.remove("bg-light");
-  //   document.querySelector(".container>.row>.right").classList.add("bg-white");
-
-  //   document.querySelector(".container>.row>.left").classList.add("bg-light");
-  //   document
-  //     .querySelector(".container>.row>.left")
-  //     .classList.remove("bg-white");
-  // }
-
-  // test 2 :
-  // utiliser classe active, et div au dessus pour récup le parent de la class active
-  // et modif la couleur
-  document.querySelector(".player-1-div").classList.toggle("active");
   document.querySelector(".player-0-div").classList.toggle("active");
+  document.querySelector(".player-1-div").classList.toggle("active");
 }
 
 /*********************************function init *********************************************************/
+document.querySelector(".button-New_game").addEventListener("click", init);
+
 function init() {
+  scores = [0, 0];
+  activePlayer = 0;
+  roundScore = 0;
+
   var test = document.getElementById("dede");
   test.style.display = "none";
 
   document.getElementById("score-player-0").textContent = "0";
   document.getElementById("score-player-1").textContent = "0";
+
   document.getElementById("score-current-player-0").textContent = "0";
   document.getElementById("score-current-player-1").textContent = "0";
+
+  document.getElementById("textPlayer-0").textContent = "Player 1";
+  document.getElementById("textPlayer-1").textContent = "Player 2";
+
+  document.querySelector(".player-1-div").classList.remove("active");
+  document.querySelector(".player-0-div").classList.remove("active");
+  document.querySelector(".player-1-div").classList.add("active");
 }
