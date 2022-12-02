@@ -2,6 +2,7 @@
 var roundScore;
 var scores;
 var activePlayer;
+var gameProgress;
 
 init();
 
@@ -13,24 +14,27 @@ function addCurrentPlayerScore(activePlayer) {
 }
 
 document.querySelector(".button-Roll").addEventListener("click", function () {
-  // 1. Random number
-  let randomDice = Math.floor(Math.random() * 6) + 1;
+  if (gameProgress) {
+    // 1. Random number
+    var randomDice = Math.floor(Math.random() * 6) + 1;
 
-  //2. Display the result
-  let displayResult = document.getElementById("dede");
-  displayResult.style.display = "initial";
-  displayResult.src = "./image/dice_" + randomDice + ".png";
+    //2. Display the result
+    displayResult = document.getElementById("dede");
+    displayResult.style.display = "initial";
+    displayResult.src = "./image/dice_" + randomDice + ".png";
 
-  //3. Update the round score IF the rolled number was NOT a 1
-  if (randomDice !== 1) {
-    //Add score
-    roundScore += randomDice;
+    //3. Update the round score IF the rolled number was NOT a 1
+    if (randomDice !== 1) {
+      //Add score
+      roundScore += randomDice;
 
-    //update the score
-    addCurrentPlayerScore(activePlayer);
-  } else {
-    //Next player
-    nextPlayer();
+      //update the score
+      addCurrentPlayerScore(activePlayer);
+    } else {
+      //Next player
+
+      nextPlayer();
+    }
   }
 });
 
@@ -41,17 +45,19 @@ function addTotalPlayerScore(activePlayer) {
 }
 
 document.querySelector(".button-Hold").addEventListener("click", function () {
-  // Add CURRENT score to GLOBAL score
-  scores[activePlayer] += roundScore;
+  if (gameProgress) {
+    // Add CURRENT score to GLOBAL score
+    scores[activePlayer] += roundScore;
 
-  // Update the UI
-  winner(activePlayer);
-  addTotalPlayerScore(activePlayer);
-  nextPlayer();
+    // Update the UI
+    addTotalPlayerScore(activePlayer);
+
+    // Check if player won the game
+    winner(activePlayer);
+  } else {
+    nextPlayer();
+  }
 });
-
-//winner
-//winner(activePlayer);
 
 /***************check the winner *********************************/
 
@@ -62,6 +68,9 @@ function winner(activePlayer) {
     document.querySelector("#textPlayer-" + activePlayer).textContent =
       "Winner!";
     document.querySelector("#dede").style.display = "none";
+    gameProgress = false;
+  } else {
+    nextPlayer();
   }
 }
 
@@ -90,6 +99,7 @@ function init() {
   scores = [0, 0];
   activePlayer = 0;
   roundScore = 0;
+  gameProgress = true;
 
   var test = document.getElementById("dede");
   test.style.display = "none";
