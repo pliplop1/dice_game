@@ -18,8 +18,7 @@ body .container:first-child {
   margin: 6rem auto;
 }
 
-.left,
-.right {
+#principal {
   height: 80vh;
 }
 

@@ -42,6 +42,7 @@ document.querySelector(".button-Roll").addEventListener("click", function () {
 function addTotalPlayerScore(activePlayer) {
   document.querySelector("#score-player-" + activePlayer).textContent =
     scores[activePlayer];
+  console.log(activePlayer);
 }
 
 document.querySelector(".button-Hold").addEventListener("click", function () {
@@ -75,7 +76,7 @@ function winner(activePlayer) {
 }
 
 /*********************funtion nextplayer ***********************************/
-var activePlayer = Math.floor(Math.random() * 2) + 1;
+var activePlayer = Math.floor(Math.random() * 2);
 
 function nextPlayer() {
   roundScore = 0;
