@@ -1,7 +1,7 @@
 //  Initialisation
-var roundScore = 0;
-var scores = [0, 0];
-var activePlayer = 0;
+var roundScore;
+var scores;
+var activePlayer;
 
 init();
 
