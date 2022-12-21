@@ -19,7 +19,7 @@ document.querySelector(".button-Roll").addEventListener("click", function () {
     var randomDice = Math.floor(Math.random() * 6) + 1;
 
     //2. Display the result
-    displayResult = document.getElementById("dede");
+    let displayResult = document.querySelector("#dede");
     displayResult.style.display = "initial";
     displayResult.src = "./image/dice_" + randomDice + ".png";
 
@@ -86,8 +86,8 @@ function nextPlayer() {
     activePlayer = 0;
   }
 
-  document.getElementById("score-current-player-0").textContent = "0";
-  document.getElementById("score-current-player-1").textContent = "0";
+  document.querySelector("#score-current-player-0").textContent = "0";
+  document.querySelector("#score-current-player-1").textContent = "0";
 
   document.querySelector(".player-0-div").classList.toggle("active");
   document.querySelector(".player-1-div").classList.toggle("active");
@@ -102,17 +102,17 @@ function init() {
   roundScore = 0;
   gameProgress = true;
 
-  var test = document.getElementById("dede");
+  var test = document.querySelector("#dede");
   test.style.display = "none";
 
-  document.getElementById("score-player-0").textContent = "0";
-  document.getElementById("score-player-1").textContent = "0";
+  document.querySelector("#score-player-0").textContent = "0";
+  document.querySelector("#score-player-1").textContent = "0";
 
-  document.getElementById("score-current-player-0").textContent = "0";
-  document.getElementById("score-current-player-1").textContent = "0";
+  document.querySelector("#score-current-player-0").textContent = "0";
+  document.querySelector("#score-current-player-1").textContent = "0";
 
-  document.getElementById("textPlayer-0").textContent = "Player 1";
-  document.getElementById("textPlayer-1").textContent = "Player 2";
+  document.querySelector("#textPlayer-0").textContent = "Player 1";
+  document.querySelector("#textPlayer-1").textContent = "Player 2";
 
   document.querySelector(".player-1-div").classList.remove("active");
   document.querySelector(".player-0-div").classList.remove("active");
